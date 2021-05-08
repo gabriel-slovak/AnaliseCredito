@@ -39,7 +39,7 @@ namespace AnaliseCredito
             porcentagemDois = renda/10;
             porcentagem = porcentagemUm * porcentagemDois;
 
-            if (valorSolic > porcentagem)
+            if ((valorSolic / quantParcelas) > porcentagem)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("\nNão é possível realizar um empréstimo que ultrapasse 30% da renda.\n");
